@@ -1,1 +1,163 @@
+1. Introduction
 
+Ce rapport présente une analyse complète des deux jeux de données Wine Quality (vin rouge et vin blanc), très utilisés pour les projets de data science, statistiques, et machine learning.
+Les données proviennent du UCI Machine Learning Repository, une référence dans le domaine.
+
+L’objectif est d’explorer et d’interpréter la relation entre les caractéristiques chimiques du vin et la note de qualité attribuée par des experts.
+
+🧾 2. Origine des données
+
+Source : UCI Machine Learning Repository
+
+Région viticole : Vinho Verde, Portugal
+
+Producteurs : Laboratoires de contrôle œnologique portugais
+
+Objectif de collecte : Étudier si la qualité du vin peut être prédite à partir de mesures physico-chimiques
+
+📂 3. Description des données
+3.1. Volume
+
+Vin rouge : 1 599 échantillons
+
+Vin blanc : 4 898 échantillons
+
+3.2. Variables
+
+Chaque observation contient 11 variables chimiques + 1 variable cible (quality) :
+
+fixed acidity
+
+volatile acidity
+
+citric acid
+
+residual sugar
+
+chlorides
+
+free sulfur dioxide
+
+total sulfur dioxide
+
+density
+
+pH
+
+sulphates
+
+alcohol
+
+quality (note de 0 à 10)
+
+🧪 4. Méthodologie d’analyse
+
+Exploration initiale
+
+Vérification du format, type des variables et valeurs manquantes
+
+Aucune valeur manquante détectée
+
+Statistiques descriptives
+
+Analyse de la distribution des variables
+
+Étude des moyennes, min/max, écart-types
+
+Analyse de corrélation
+
+Matrices de corrélation
+
+Mise en évidence des variables influençant la qualité
+
+Interprétation des résultats
+
+📊 5. Résultats – Vin Rouge
+5.1. Statistiques clés
+
+Teneur en alcool moyenne : 10.4 %
+
+Acidité volatile élevée, souvent associée à des arômes vinaigrés
+
+Qualité moyenne : 5.6/10
+
+5.2. Corrélations importantes
+Variable	Sens	Interprétation
+alcohol	➕ positive	Les vins plus alcoolisés sont mieux notés
+volatile acidity	➖ négative	Une forte acidité volatile détériore la qualité
+sulphates	➕ légère	Impact positif sur la structure aromatique
+5.3. Conclusion (vin rouge)
+
+La qualité du vin rouge dépend surtout :
+
+d’un bon équilibre de l’acidité
+
+d’un niveau maîtrisé d’acidité volatile
+
+d’un taux d’alcool plus élevé
+
+🍾 6. Résultats – Vin Blanc
+6.1. Statistiques clés
+
+Alcool moyen plus élevé que pour le vin rouge
+
+Sucres résiduels plus importants (typique des vins blancs)
+
+Qualité moyenne : 5.9/10
+
+6.2. Corrélations importantes
+Variable	Sens	Interprétation
+alcohol	➕ positive	Plus d’alcool → meilleure qualité
+density	➖ négative	Une densité élevée indique trop de sucre
+residual sugar	➕ faible	Légèrement positif, influence douce
+6.3. Conclusion (vin blanc)
+
+La qualité du vin blanc dépend principalement de :
+
+l’équilibre sucre-acidité
+
+la teneur en alcool
+
+la densité (liée à la fermentation)
+
+⚖️ 7. Comparaison entre vin rouge et vin blanc
+Aspect	Vin Rouge	Vin Blanc
+Variable positive principale	alcohol	alcohol
+Facteur négatif majeur	volatile acidity	density
+Moyenne qualité	5.6	5.9
+Sucre résiduel	Faible	Élevé
+🧠 8. Interprétation générale
+
+L’alcool est le meilleur prédicteur de qualité dans les deux datasets.
+
+Les vins rouges sont fortement influencés par l’acidité volatile, qui dégrade l’odeur et la saveur.
+
+Les vins blancs sont davantage liés au sucre résiduel et à la densité, paramètres essentiels dans le processus de fermentation.
+
+Le pH, malgré son rôle perçu, montre une influence très limitée sur la note finale.
+
+🏁 9. Conclusion
+
+Cette étude permet de :
+✔ Comprendre les facteurs chimiques déterminants dans la qualité du vin
+✔ Comparer le comportement des vins rouges vs blancs
+✔ Identifier les variables essentielles pour créer un modèle prédictif
+
+Ces données offrent une excellente base pour :
+
+des projets de machine learning
+
+des analyses statistiques
+
+des dashboards (Power BI / Tableau)
+
+des publications GitHub professionnelles
+
+📎 10. Suggestions pour le dépôt GitHub
+
+Vous pouvez intégrer :
+
+📁 /data/ → les fichiers CSV
+📄 /docs/report.md → ce rapport
+📊 /notebooks/ → analyses Jupyter
+🤖 /models/ → modèles de machine learning
